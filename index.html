@@ -1,168 +1,243 @@
+To give your landing page a vibrant, happy, and inviting feel, we need to swap the corporate "dark mode" for high-energy colors like Electric Blue, Sunshine Yellow, and Soft Coral. I've also updated the copy to sound more enthusiastic and approachable—perfect for a "Friendly Hobbies" pitch!
+
+Replace your current code in VS Code with this updated version:
+
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendly Hobbies | STEM & 3D Printing services</title>
+    <title>Friendly Hobbies | Spark Your Curiosity!</title>
     <style>
         :root {
-            --primary: #2d3436;
-            --accent: #00b894;
-            --light: #f9f9f9;
-            --dark: #1e272e;
+            --primary: #4834d4; /* Vibrant Blue */
+            --accent: #f9ca24;  /* Sunshine Yellow */
+            --secondary: #eb4d4b; /* Soft Coral */
+            --bg-light: #f0f3f7;
             --white: #ffffff;
+            --text-dark: #2d3436;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary); background: var(--light); }
+        body { 
+            font-family: 'Montserrat', sans-serif, system-ui; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background: var(--bg-light); 
+        }
         
-        /* Hero Section */
-        .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: var(--white); padding: 60px 20px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        /* Fun Hero Section */
+        .hero { 
+            background: linear-gradient(135deg, #686de0 0%, #4834d4 100%); 
+            color: var(--white); 
+            padding: 80px 20px; 
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; text-shadow: 2px 2px 10px rgba(0,0,0,0.2); }
+        .hero p { font-size: 1.3rem; font-weight: 300; max-width: 700px; margin: 0 auto; }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--dark); border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-        .section-center { text-align: center; margin-bottom: 50px; }
-
-        /* Product Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
-        .card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-img { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; font-weight: bold; }
-        .card-content { padding: 20px; }
-        .price { font-size: 1.25rem; color: var(--accent); font-weight: bold; margin: 10px 0; }
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
         
-        /* Services Section */
-        .services { background: #fff; padding: 40px; border-radius: 12px; }
-        .service-item { margin-bottom: 25px; padding-left: 20px; border-left: 4px solid var(--accent); }
+        h2 { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2.2rem; 
+            color: var(--primary); 
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
 
-        /* Subscription Table */
-        .sub-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
-        .sub-table th, .sub-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
-        .sub-table th { background: var(--primary); color: white; }
+        /* Product Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .card { 
+            background: var(--white); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 20px rgba(72, 52, 212, 0.1); 
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(72, 52, 212, 0.2); }
+        .card-img { 
+            height: 220px; 
+            background: #dff9fb; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: var(--primary); 
+            font-weight: bold; 
+            font-size: 1.2rem;
+        }
+        .card-content { padding: 25px; }
+        .card-content h3 { margin-bottom: 10px; color: var(--primary); }
+        .price { 
+            display: inline-block;
+            background: var(--accent);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: var(--text-dark);
+        }
+        
+        /* Happy Services Section */
+        .services { background: var(--white); padding: 50px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-item { margin-bottom: 30px; position: relative; padding-left: 30px; }
+        .service-item h3 { color: var(--secondary); margin-bottom: 5px; }
+        .service-item::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* Fun Table */
+        .sub-table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin-top: 20px; }
+        .sub-table th { background: var(--primary); color: white; padding: 20px; border-radius: 10px 10px 0 0; }
+        .sub-table td { background: white; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .sub-table tr td:first-child { border-left: 1px solid #eee; border-radius: 10px 0 0 10px; font-weight: bold; color: var(--primary); }
+        .sub-table tr td:last-child { border-right: 1px solid #eee; border-radius: 0 10px 10px 0; font-weight: bold; }
 
         /* STEM Section */
-        .stem-section { background: var(--dark); color: white; padding: 60px 20px; border-radius: 12px; margin-top: 40px; }
-        .stem-section h2 { color: white; border-bottom-color: var(--accent); }
+        .stem-section { 
+            background: var(--secondary); 
+            color: white; 
+            padding: 60px 30px; 
+            border-radius: 40px; 
+            margin-top: 50px; 
+            text-align: center;
+        }
+        .stem-section h2 { color: white; }
+        .stem-section h2::after { background: var(--accent); }
 
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #777; }
+        footer { text-align: center; padding: 50px; font-size: 1rem; color: #95afc0; }
         
         @media (max-width: 600px) {
-            .hero h1 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .services { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <h1>Friendly Hobbies</h1>
-        <p>Bambu Lab Authorized Partner | STEM Education  | B2B Technical Services</p>
+        <h1>Friendly Hobbies! 🚀</h1>
+        <p>Your local partners in 3D Printing magic and STEM discovery. We don't just sell printers; we build future creators!</p>
     </header>
 
     <div class="container">
         
         <div class="section-center">
-            <h2>Bambu Lab Lineup</h2>
+            <h2>The Bambu Lab Lineup</h2>
         </div>
         <div class="grid">
             <div class="card">
                 <div class="card-img">Bambu Lab X1-Carbon</div>
                 <div class="card-content">
-                    <h3>X1-Carbon Combo</h3>
-                    <p>The industry leader in speed and reliability. Features AI inspection and multi-color printing.</p>
-                    <p class="price">$1,449.00</p>
+                    <h3>The X1-Carbon Combo</h3>
+                    <p>The "Ferrari" of 3D printing! Fast, smart, and handles multi-color prints with total ease. Perfect for pros!</p>
+                    <span class="price">$1,449.00</span>
                 </div>
             </div>
             <div class="card">
                 <div class="card-img">Bambu Lab P1S</div>
                 <div class="card-content">
-                    <h3>P1S Series</h3>
-                    <p>The perfect balance of performance and value. Fully enclosed for advanced materials.</p>
-                    <p class="price">$699.00</p>
+                    <h3>The P1S Series</h3>
+                    <p>Reliable and ready for anything! It’s fully enclosed, making it the best choice for advanced materials.</p>
+                    <span class="price">$699.00</span>
                 </div>
             </div>
             <div class="card">
                 <div class="card-img">Bambu Lab A1</div>
                 <div class="card-content">
-                    <h3>A1 Full-Size</h3>
-                    <p>High-speed, multi-color printing made accessible for schools and hobbyists.</p>
-                    <p class="price">$399.00</p>
+                    <h3>The A1 Full-Size</h3>
+                    <p>The ultimate beginner-friendly beast. High-speed fun that makes multi-color printing accessible for everyone!</p>
+                    <span class="price">$399.00</span>
                 </div>
             </div>
         </div>
 
         <div class="section-center">
-            <h2>Our Services</h2>
+            <h2>How We Help You Grow</h2>
         </div>
         <div class="services">
             <div class="service-item">
-                <h3>B2B Site Sales</h3>
-                <p>We supply businesses and schools with bulk hardware orders, tax-exempt processing, and dedicated account management.</p>
+                <h3>B2B & School Solutions</h3>
+                <p>Looking to upgrade your classroom or business? We offer bulk sales, easy tax-exempt ordering, and friendly account support.</p>
             </div>
             <div class="service-item">
-                <h3>Technical Maintenance & Repair</h3>
-                <p>Authorized Bambu Lab service. We handle everything from hotend replacements to deep mechanical calibrations.</p>
+                <h3>Expert Tune-Ups & Repairs</h3>
+                <p>Keep your machines running like new! We provide authorized maintenance for all Bambu Lab printers.</p>
             </div>
             <div class="service-item">
-                <h3>Professional Setup & Courses</h3>
-                <p>On-site installation and "Start-to-Print" training modules for your staff or students.</p>
+                <h3>Setup & Creative Courses</h3>
+                <p>Jumpstart your journey! We’ll help you set up and teach your team how to design and print like experts.</p>
             </div>
         </div>
 
         <div class="section-center" style="margin-top: 60px;">
-            <h2>Service Subscriptions</h2>
+            <h2>Care & Support Plans</h2>
         </div>
         <table class="sub-table">
             <thead>
                 <tr>
-                    <th>Plan Level</th>
-                    <th>Inclusions</th>
-                    <th>Contract</th>
-                    <th>Monthly Cost</th>
+                    <th>The Plan</th>
+                    <th>What You Get</th>
+                    <th>Length</th>
+                    <th>Cost</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Essential Care</td>
-                    <td>Quarterly tune-ups & remote tech support</td>
-                    <td>12 Months</td>
-                    <td>$49.99</td>
+                    <td>Quarterly check-ups & remote help</td>
+                    <td>1 Year</td>
+                    <td>$49.99/mo</td>
                 </tr>
                 <tr>
                     <td>Pro Maintenance</td>
-                    <td>Monthly on-site checks + emergency repairs</td>
-                    <td>12 Months</td>
-                    <td>$129.99</td>
+                    <td>Monthly on-site visits + repairs</td>
+                    <td>1 Year</td>
+                    <td>$129.99/mo</td>
                 </tr>
                 <tr>
-                    <td>Education/B2B</td>
-                    <td>Full fleet management + staff training</td>
-                    <td>Custom</td>
-                    <td>Contact Us</td>
+                    <td>Education Pro</td>
+                    <td>Full fleet care + student training</td>
+                    <td>Flexible</td>
+                    <td>Let's Chat!</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="stem-section">
-            <div class="section-center">
-                <h2>STEM Learning Kits</h2>
-            </div>
-            <div class="grid">
+            <h2>Hands-On STEM Fun! 🧠</h2>
+            <div class="grid" style="margin-top: 40px;">
                 <div class="card" style="color: #2d3436;">
                     <div class="card-img">Robotics Kit</div>
                     <div class="card-content">
-                        <h3>Advanced Robotics</h3>
-                        <p>Arduino-based learning kits for ages 12+.</p>
-                        <p class="price">$85.00</p>
+                        <h3>Robotics Adventure</h3>
+                        <p>Build and program your own bots! Perfect for students and curious minds.</p>
+                        <span class="price">$85.00</span>
                     </div>
                 </div>
                 <div class="card" style="color: #2d3436;">
                     <div class="card-img">Rocketry Set</div>
                     <div class="card-content">
                         <h3>Model Rocketry</h3>
-                        <p>Aerodynamics and physics in practice.</p>
-                        <p class="price">$45.00</p>
+                        <p>Blast off with physics! Build, launch, and learn the science of flight.</p>
+                        <span class="price">$45.00</span>
                     </div>
                 </div>
             </div>
@@ -171,7 +246,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Friendly Hobbies. Visit us at our Las Vegas showroom.</p>
+        <p>Made with ❤️ by Friendly Hobbies | Las Vegas, NV</p>
     </footer>
 
 </body>
