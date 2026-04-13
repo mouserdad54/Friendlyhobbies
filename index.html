@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendly Hobbies | STEM & 3D Printing services</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #00b894;
+            --light: #f9f9f9;
+            --dark: #1e272e;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary); background: var(--light); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: var(--white); padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--dark); border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        .section-center { text-align: center; margin-bottom: 50px; }
+
+        /* Product Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; font-weight: bold; }
+        .card-content { padding: 20px; }
+        .price { font-size: 1.25rem; color: var(--accent); font-weight: bold; margin: 10px 0; }
+        
+        /* Services Section */
+        .services { background: #fff; padding: 40px; border-radius: 12px; }
+        .service-item { margin-bottom: 25px; padding-left: 20px; border-left: 4px solid var(--accent); }
+
+        /* Subscription Table */
+        .sub-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        .sub-table th, .sub-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+        .sub-table th { background: var(--primary); color: white; }
+
+        /* STEM Section */
+        .stem-section { background: var(--dark); color: white; padding: 60px 20px; border-radius: 12px; margin-top: 40px; }
+        .stem-section h2 { color: white; border-bottom-color: var(--accent); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #777; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Friendly Hobbies</h1>
+        <p>Bambu Lab Authorized Partner | STEM Education  | B2B Technical Services</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-center">
+            <h2>Bambu Lab Lineup</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">Bambu Lab X1-Carbon</div>
+                <div class="card-content">
+                    <h3>X1-Carbon Combo</h3>
+                    <p>The industry leader in speed and reliability. Features AI inspection and multi-color printing.</p>
+                    <p class="price">$1,449.00</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">Bambu Lab P1S</div>
+                <div class="card-content">
+                    <h3>P1S Series</h3>
+                    <p>The perfect balance of performance and value. Fully enclosed for advanced materials.</p>
+                    <p class="price">$699.00</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">Bambu Lab A1</div>
+                <div class="card-content">
+                    <h3>A1 Full-Size</h3>
+                    <p>High-speed, multi-color printing made accessible for schools and hobbyists.</p>
+                    <p class="price">$399.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-center">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services">
+            <div class="service-item">
+                <h3>B2B Site Sales</h3>
+                <p>We supply businesses and schools with bulk hardware orders, tax-exempt processing, and dedicated account management.</p>
+            </div>
+            <div class="service-item">
+                <h3>Technical Maintenance & Repair</h3>
+                <p>Authorized Bambu Lab service. We handle everything from hotend replacements to deep mechanical calibrations.</p>
+            </div>
+            <div class="service-item">
+                <h3>Professional Setup & Courses</h3>
+                <p>On-site installation and "Start-to-Print" training modules for your staff or students.</p>
+            </div>
+        </div>
+
+        <div class="section-center" style="margin-top: 60px;">
+            <h2>Service Subscriptions</h2>
+        </div>
+        <table class="sub-table">
+            <thead>
+                <tr>
+                    <th>Plan Level</th>
+                    <th>Inclusions</th>
+                    <th>Contract</th>
+                    <th>Monthly Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Essential Care</td>
+                    <td>Quarterly tune-ups & remote tech support</td>
+                    <td>12 Months</td>
+                    <td>$49.99</td>
+                </tr>
+                <tr>
+                    <td>Pro Maintenance</td>
+                    <td>Monthly on-site checks + emergency repairs</td>
+                    <td>12 Months</td>
+                    <td>$129.99</td>
+                </tr>
+                <tr>
+                    <td>Education/B2B</td>
+                    <td>Full fleet management + staff training</td>
+                    <td>Custom</td>
+                    <td>Contact Us</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="stem-section">
+            <div class="section-center">
+                <h2>STEM Learning Kits</h2>
+            </div>
+            <div class="grid">
+                <div class="card" style="color: #2d3436;">
+                    <div class="card-img">Robotics Kit</div>
+                    <div class="card-content">
+                        <h3>Advanced Robotics</h3>
+                        <p>Arduino-based learning kits for ages 12+.</p>
+                        <p class="price">$85.00</p>
+                    </div>
+                </div>
+                <div class="card" style="color: #2d3436;">
+                    <div class="card-img">Rocketry Set</div>
+                    <div class="card-content">
+                        <h3>Model Rocketry</h3>
+                        <p>Aerodynamics and physics in practice.</p>
+                        <p class="price">$45.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Friendly Hobbies. Visit us at our Las Vegas showroom.</p>
+    </footer>
+
+</body>
+</html>
